@@ -41,5 +41,13 @@ public class Main {
             
         }
 
+        if (usuarioPontos >= 7) {
+            System.out.printf("Parabéns, %s! Você foi aprovado com um total de %d pontos.", nome, usuarioPontos);
+        } else {
+            System.out.printf("Que pena, %s! Você foi reprovado com um total de %d pontos.", nome, usuarioPontos);
+        }
+
+        scan.close();
+
     }
 }
