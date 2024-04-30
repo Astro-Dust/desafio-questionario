@@ -29,5 +29,17 @@ public class Main {
         alternativas.add("a) Bob  |  b) Carl | c) Zec");
         alternativas.add("a) 3.10 |  b) 3    | c) 3.14");
 
+        for (int i = 0; i < maxPerguntas; i++) {
+            System.out.println(perguntas.get(i));
+            System.out.println(alternativas.get(i));
+            System.out.print("Qual é a sua resposta? ");
+            respostaUsuario = scan.next().charAt(0);
+
+            if (gabarito[i] == respostaUsuario) {
+                usuarioPontos += 2;
+            }
+            
+        }
+
     }
 }
