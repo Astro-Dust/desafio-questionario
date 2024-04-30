@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        char respostaUsuario;
         String nome;
+        char respostaUsuario;
         int maxPerguntas = 5;
         int usuarioPontos = 0;
 
@@ -12,6 +12,7 @@ public class Main {
 
         System.out.print("Qual o seu nome? ");
         nome = scan.nextLine();
+        String nomeTratado = nome.substring(0, 1).toUpperCase() + nome.substring(1); // nome capitalizado
 
         char[] gabarito = {'a', 'c', 'b', 'a', 'c'};
 
@@ -42,9 +43,9 @@ public class Main {
         }
 
         if (usuarioPontos >= 7) {
-            System.out.printf("Parabéns, %s! Você foi aprovado com um total de %d pontos.", nome, usuarioPontos);
+            System.out.printf("Parabéns, %s! Você foi aprovado com um total de %d pontos.\n", nomeTratado, usuarioPontos);
         } else {
-            System.out.printf("Que pena, %s! Você foi reprovado com um total de %d pontos.", nome, usuarioPontos);
+            System.out.printf("Que pena, %s! Você foi reprovado com um total de %d pontos.\n", nomeTratado, usuarioPontos);
         }
 
         scan.close();
